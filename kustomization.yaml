@@ -1,0 +1,19 @@
+resources:
+  # Choose your kustomize version
+  - github.com/ertis-research/kafka-ml/kustomize/master
+
+# Namespace where Kafka-ML will be deployed
+namespace: kafkaml
+
+configMapGenerator:
+  - name: kafkaml-configmap
+    behavior: merge
+    literals:
+      # Comma separated list of Kafka brokers
+      - brokers=kafka1,kafka2,kafka3
+
+      
+
+      
+
+
